@@ -144,8 +144,8 @@ RENDERERS: dict[ElementType, Callable[[DocumentElement, str], str]] = {
     "caption": _render_caption,
 }
 
-# Adding an element type to `ElementType` without a renderer fails at import, the runtime
-# equivalent of the client registry's compile-time exhaustiveness check.
+# Adding an element type to `ElementType` without a renderer fails at import rather than
+# when a document containing that type is first rendered.
 assert set(RENDERERS) == set(get_args(ElementType)), (
     f"renderers missing for: {set(get_args(ElementType)) - set(RENDERERS)}"
 )

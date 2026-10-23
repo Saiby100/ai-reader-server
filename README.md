@@ -121,13 +121,6 @@ full-page OCR of the affected pages. Born-digital PDFs are left untouched. Contr
 PDF link annotations are recovered too: `/URI` annotations become `link_href`, and `/GoTo`
 annotations become `link_target_page`, including inside table-of-contents table cells.
 
-## Status
-
-This repo was a Next.js reading app with the parser as a sub-service; it is now the parser
-alone. Removed in that refactor: the reader UI, the document library, notes and their
-MongoDB storage, IndexedDB document storage, and the Gemini chat endpoint. The React
-renderer that used to produce the debug HTML now lives in Python as `app/render_html.py`.
-
 ## Tech
 
 Python 3.11 · FastAPI · Docling · pydantic-settings · RapidOCR + pypdfium2 for ligature
