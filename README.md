@@ -1,4 +1,4 @@
-# Document Parser
+# AI Reader Server
 
 A FastAPI service that turns a PDF (or DOCX, PPTX, HTML, Markdown, plain text) into a
 structured document tree — headings, tables, figures, formulas and links preserved — using
